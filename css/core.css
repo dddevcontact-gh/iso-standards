@@ -1,0 +1,104 @@
+:root {
+    --primary: #1a1e31;
+    --text: #ffffff;
+    --text-hover: #6070c2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#topbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5vh;
+    background-color: var(--primary);
+    align-items: center;
+}
+
+#topbar p, #topbar a, #topbar div {
+    color: var(--text);
+    padding-right: 3vw;
+}
+
+#topbar a {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+#topbar a:hover {
+    color: var(--text-hover);
+}
+
+#title {
+    font-weight: bold;
+}
+
+/* Base mobile styles */
+
+@media (max-width: 767px) {
+    #mobilenav {
+        position: absolute;
+        right: 0%;
+        background-color: var(--primary);
+        height: 100vh;
+        width: 15vw;
+    }
+
+    #menu {
+        font-weight: bold;
+        font-size: 200%;
+        position: relative;
+        left: 45vw;
+        bottom: 0.45vh;
+    }
+
+    #menu:hover {
+        color: var(--text-hover);
+        cursor: pointer;
+    }
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+
+}
+
+/* Desktop and up */
+@media (min-width: 1200px) {
+    #topbar {
+        height: 5vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #topbar p {
+        padding-left: 2vw;
+    }
+
+    #title {
+        font-size: 140%;
+    }
+
+    #footerbar {
+        background-color: var(--primary);
+        color: var(--text);
+        font-weight: bold;
+        height: 4vh;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
