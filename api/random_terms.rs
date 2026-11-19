@@ -5,7 +5,7 @@ use vercel_runtime::{Error, Request, run, service_fn};
 #[tokio::main] // provides an async runtime, rust crate (rusts package manager is Cargo, self explanatory)
 async fn main() -> Result<(), Error> {
     let service = service_fn(handler); // service_fn(handler) wraps handler function so vercel knows how to call it in deployment
-    run(service).await; // hands handler to runtime and keeps the function alive to receive requests
+    run(service).await // hands handler to runtime and keeps the function alive to receive requests
 }
 
 // return type will either produce a json value type or a lovely error
