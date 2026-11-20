@@ -2,6 +2,10 @@ const width = parseInt(window.outerWidth);
 const height = parseInt(window.outerHeight);
 const menu = document.getElementById('menu');
 const container = document.getElementByIdName('mobilenav'); // need to hide stuff inside this for desktop mode
+const def_terms = document.getElementByIdName('term-definition');
+
+let term = "";
+let def = "";
 
 console.log(`width ${width}`);
 console.log(`height ${height}`);
@@ -21,3 +25,27 @@ switch (true) {
         menu.style.display = "block";
         break;
 }
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch("https://iso-standards-delta.vercel.app/api/random_terms");
+
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        term = data.term;
+        def = data.definition;
+
+        def_terms.textContent = `${term}`;
+        console.log(randomNumber);
+    } catch (err) {
+        console.error("Failed to fetch term:", err);
+    }
+});
+
+def_terms.addEventListener('mouseover', (event) => {
+    def_terms.textContent = `${definition}`;
+})
