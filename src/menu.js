@@ -1,8 +1,8 @@
 const width = parseInt(window.outerWidth);
 const height = parseInt(window.outerHeight);
 const menu = document.getElementById('menu');
-const container = document.getElementByIdName('mobilenav'); // need to hide stuff inside this for desktop mode
-const def_terms = document.getElementByIdName('term-definition');
+const container = document.getElementById('mobilenav'); // need to hide stuff inside this for desktop mode
+const def_terms = document.getElementById('term-definition');
 
 let term = "";
 let def = "";
