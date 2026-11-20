@@ -14,7 +14,6 @@ switch (true) {
     case width >= 1200:
         console.log("Using desktop overlay");
         menu.style.display = "none";
-        container.
         break;
     case width >= 768:
         console.log("Using tablet overlay");
@@ -40,12 +39,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         def = data.definition;
 
         def_terms.textContent = `${term}`;
-        console.log(randomNumber);
     } catch (err) {
         console.error("Failed to fetch term:", err);
     }
 });
 
 def_terms.addEventListener('mouseover', (event) => {
-    def_terms.textContent = `${definition}`;
+    def_terms.textContent = `${def}`;
+})
+
+def_terms.addEventListener('mouseout', (event) => {
+    def_terms.textContent = `${term}`;
 })
