@@ -100,7 +100,6 @@
         flex-direction: row;
     }
 
-    /* Title, Home, Key Terms: never wrap, never shrink */
     #topbar p {
         padding-left: 2vw;
         text-wrap: nowrap;
@@ -108,7 +107,6 @@
         flex-shrink: 0;
     }
 
-    /* Only the definition wraps, using whatever space is left */
     #topbar #term-definition {
         flex: 1 1 0;
         min-width: 0;
