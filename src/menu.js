@@ -1,29 +1,8 @@
-const width = parseInt(window.outerWidth);
-const height = parseInt(window.outerHeight);
-const menu = document.getElementById('menu');
 const container = document.getElementById('mobilenav'); // need to hide stuff inside this for desktop mode
 const def_terms = document.getElementById('term-definition');
 
 let term = "";
 let def = "";
-
-console.log(`width ${width}`);
-console.log(`height ${height}`);
-
-switch (true) {
-    case width >= 1200:
-        console.log("Using desktop overlay");
-        menu.style.display = "none";
-        break;
-    case width >= 768:
-        console.log("Using tablet overlay");
-        menu.style.display = "block";
-        break;
-    case width < 768:
-        console.log("Using mobile overlay");
-        menu.style.display = "block";
-        break;
-}
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
