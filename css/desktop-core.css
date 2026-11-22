@@ -102,11 +102,14 @@
 
     #topbar p {
         padding-left: 2vw;
-        text-wrap: wrap;
     }
 
     #title {
         font-size: 140%;
+    }
+
+    #term-definition {
+        text-wrap: wrap;
     }
 
     #footerbar {
