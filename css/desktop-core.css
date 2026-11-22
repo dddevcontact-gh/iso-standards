@@ -94,7 +94,7 @@
         flex-direction: column;
     }
     #topbar {
-        min-height: 5vh;
+        min-height: 6vh;
         width: 100%;
         display: flex;
         flex-direction: row;
