@@ -117,6 +117,10 @@
         padding-bottom: 0.5vh;
     }
 
+    #term-definition {
+        font-weight: bold;
+    }
+
     #title {
         font-size: 140%;
     }
