@@ -1,0 +1,63 @@
+:root {
+    --primary: #1a1e31;
+    --secondary: #282e4b;
+    --text: #ffffff;
+    --text-hover: #6070c2;
+}
+
+header {
+    background-color: var(--primary);
+}
+
+#footerbar {
+    background-color: var(--primary);
+    color: var(--text);
+    font-weight: bold;
+    height: 4vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidenav {
+    position: absolute;
+    right: 0%;
+    height: 100vh;
+    width: 70vw;
+    background-color: var(--secondary);
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu {
+    position: relative;
+    left: 55vw;
+    font-size: 160%;
+}
+
+#sidenav a {
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 200%;
+    line-height: 12vh;
+    border-bottom: 5px solid var(--primary);
+}
+
+#sidenav a:hover {
+    color: var(--text-hover);
+}
+
+.sidenavs {
+    display: none;
+}
+
+.sidenavs.open {
+    display: block;
+}
