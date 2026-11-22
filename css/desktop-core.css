@@ -102,6 +102,7 @@
 
     #topbar p {
         padding-left: 2vw;
+        text-wrap: wrap;
     }
 
     #title {
