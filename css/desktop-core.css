@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 5vh;
+    min-height: 5vh;
     background-color: var(--primary);
     align-items: center;
 }
@@ -94,22 +94,33 @@
         flex-direction: column;
     }
     #topbar {
-        height: 5vh;
+        min-height: 5vh;
         width: 100%;
         display: flex;
         flex-direction: row;
     }
 
+    /* Title, Home, Key Terms: never wrap, never shrink */
     #topbar p {
         padding-left: 2vw;
+        text-wrap: nowrap;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Only the definition wraps, using whatever space is left */
+    #topbar #term-definition {
+        flex: 1 1 0;
+        min-width: 0;
+        white-space: normal;
+        text-wrap: wrap;
+        overflow-wrap: anywhere;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
     }
 
     #title {
         font-size: 140%;
-    }
-
-    #term-definition {
-        text-wrap: wrap;
     }
 
     #footerbar {
